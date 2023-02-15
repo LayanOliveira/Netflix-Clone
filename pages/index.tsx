@@ -15,7 +15,7 @@ interface Props {
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
-  animations: Movie[]
+  // animations: Movie[]
   // animationstv: Movie[]
 }
 
@@ -28,7 +28,7 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-  animations,
+  // animations,
   // animationstv,
   }: Props) => {
   return (
@@ -51,7 +51,8 @@ const Home = ({
           <Row title="Scary Movies" movies={horrorMovies} />
           <Row title="Romance Movies" movies={romanceMovies} />
           <Row title="Documentaries" movies={documentaries} />
-          <Row title="Animations" movies={animations} />
+          {/* <Row title="Animations" movies={animations} /> */}
+          {/* <Row title="AnimationsTV" movies={animationstv} /> */}
         </section>
       </main>
       {/* Modal */}
@@ -71,7 +72,7 @@ export const getServerSideProps = async () => {
     horrorMovies,
     romanceMovies,
     documentaries,
-    animations,
+    // animations,
     // animationstv,
   ] = await Promise.all([
     fetch(requests.fetchNetflixOriginals).then((res) => res.json()),
@@ -82,7 +83,7 @@ export const getServerSideProps = async () => {
     fetch(requests.fetchHorrorMovies).then((res) => res.json()),
     fetch(requests.fetchRomanceMovies).then((res) => res.json()),
     fetch(requests.fetchDocumentaries).then((res) => res.json()),
-    fetch(requests.fetchAnimations).then((res) => res.json()),
+    // fetch(requests.fetchAnimations).then((res) => res.json()),
     // fetch(requests.fetchAnimationsTV).then((res) => res.json()),
   ])  
 
@@ -96,7 +97,7 @@ export const getServerSideProps = async () => {
       horrorMovies: horrorMovies.results,
       romanceMovies: romanceMovies.results,
       documentaries: documentaries.results,
-      animations: animations.results,
+      // animations: animations.results,
       // animationstv: animationstv.results,
     },
   }

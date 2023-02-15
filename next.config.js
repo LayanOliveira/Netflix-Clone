@@ -8,6 +8,5 @@ module.exports = {
         hostname: 'image.tmdb.org',
       },
     ],
-    minimumCacheTTL: 1500000,
   },
 }

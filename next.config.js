@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  swcMinify:true,
-  optimizeFonts:true,
+  optimizeFonts: true,
   images: {
     remotePatterns: [
       {
@@ -10,6 +9,6 @@ module.exports = {
         hostname: 'image.tmdb.org',
       },
     ],
-    minimumCacheTTL:1500000,
+    minimumCacheTTL: 1500000,
   },
 }

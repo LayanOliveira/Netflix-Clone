@@ -34,7 +34,7 @@ const Home = ({
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
       <Head>
-        <html lang="en"/>
+        {/* <html lang="en"/> */}
         <title>Home - ContentBay</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>

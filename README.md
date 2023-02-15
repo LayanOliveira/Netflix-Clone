@@ -34,6 +34,7 @@ Example:
 ```
 NEXT_PUBLIC_API_KEY=4545tbr45j23er12j784591n578736nlr
 ```
+
 Replace ``"4545tbr45j23er12j784591n578736nlr"`` with your key.
 
 To get your API key you need to make an account on TMDB and generate one.

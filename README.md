@@ -25,3 +25,11 @@ pnpm create next-app --example with-tailwindcss with-tailwindcss-app
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+## API SETUP
+
+To use the api you need to create a ``.env.local`` file and put this line inside
+``NEXT_PUBLIC_API_KEY= your key``.
+Example: ``NEXT_PUBLIC_API_KEY=4545tbr45j23er12j784591n578736nlr``
+
+To get your API key you need to make an account on TMDB and generate one.

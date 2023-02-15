@@ -28,8 +28,12 @@ Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&ut
 
 ## API SETUP
 
-To use the api you need to create a ``.env.local`` file and put this line inside
-``NEXT_PUBLIC_API_KEY= your key``.
-Example: ``NEXT_PUBLIC_API_KEY=4545tbr45j23er12j784591n578736nlr``
+To use the api you need to create a ``.env.local`` file and put this line inside.
+
+Example: 
+```
+NEXT_PUBLIC_API_KEY=4545tbr45j23er12j784591n578736nlr
+```
+Replace ``"4545tbr45j23er12j784591n578736nlr"`` with your key.
 
 To get your API key you need to make an account on TMDB and generate one.

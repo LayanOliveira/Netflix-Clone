@@ -15,11 +15,11 @@ interface Props {
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
-  // animations: Movie[]
-  // animationstv: Movie[]
+  animations: Movie[]
+  animationstv: Movie[]
 }
 
-const Home = ({ 
+const Home = ({
   netflixOriginals,
   actionMovies,
   comedyMovies,
@@ -28,22 +28,21 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-  // animations,
-  // animationstv,
-  }: Props) => {
+  animations,
+  animationstv,
+}: Props) => {
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
       <Head>
-        {/* <html lang="en"/> */}
         <title>Home - ContentBay</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        
-      <Header/>
+
+      <Header />
       <main className='relative pl-4 pb-24 lg:space-y-24 lg:pb-16'>
-        <Banner netflixOriginals={netflixOriginals}/>
+        <Banner netflixOriginals={netflixOriginals} />
         <section className='md:space-y-24'>
-        <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Trending Now" movies={trendingNow} />
           <Row title="Top Rated" movies={topRated} />
           <Row title="Action Thrillers" movies={actionMovies} />
           {/* My List */}
@@ -51,8 +50,8 @@ const Home = ({
           <Row title="Scary Movies" movies={horrorMovies} />
           <Row title="Romance Movies" movies={romanceMovies} />
           <Row title="Documentaries" movies={documentaries} />
-          {/* <Row title="Animations" movies={animations} /> */}
-          {/* <Row title="AnimationsTV" movies={animationstv} /> */}
+          <Row title="Animated Movies" movies={animations} />
+          <Row title="Animated Shows" movies={animationstv} />
         </section>
       </main>
       {/* Modal */}
@@ -72,8 +71,8 @@ export const getServerSideProps = async () => {
     horrorMovies,
     romanceMovies,
     documentaries,
-    // animations,
-    // animationstv,
+    animations,
+    animationstv,
   ] = await Promise.all([
     fetch(requests.fetchNetflixOriginals).then((res) => res.json()),
     fetch(requests.fetchTrending).then((res) => res.json()),
@@ -83,9 +82,9 @@ export const getServerSideProps = async () => {
     fetch(requests.fetchHorrorMovies).then((res) => res.json()),
     fetch(requests.fetchRomanceMovies).then((res) => res.json()),
     fetch(requests.fetchDocumentaries).then((res) => res.json()),
-    // fetch(requests.fetchAnimations).then((res) => res.json()),
-    // fetch(requests.fetchAnimationsTV).then((res) => res.json()),
-  ])  
+    fetch(requests.fetchAnimations).then((res) => res.json()),
+    fetch(requests.fetchAnimationsTV).then((res) => res.json()),
+  ])
 
   return {
     props: {
@@ -97,8 +96,8 @@ export const getServerSideProps = async () => {
       horrorMovies: horrorMovies.results,
       romanceMovies: romanceMovies.results,
       documentaries: documentaries.results,
-      // animations: animations.results,
-      // animationstv: animationstv.results,
+      animations: animations.results,
+      animationstv: animationstv.results,
     },
   }
 }

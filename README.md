@@ -41,4 +41,4 @@ To get your API key you need to make an account on TMDB and generate one.
 
 ## Account
 
-Accounts are handled by Google's Firebase for now.
+Accounts are currently handled by Google's Firebase.

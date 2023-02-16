@@ -26,8 +26,8 @@ function Header() {
       <div className="flex items=center space-x-2 md:space-x-10">
         <img src="/logo/MyFlix.svg"
           alt="Logo"
-          width={140}
-          height={140}
+          width={150}
+          height={150}
           className="cursor-pointer object-contain"
         />
 

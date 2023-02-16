@@ -24,7 +24,7 @@ function Header() {
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items=center space-x-2 md:space-x-10">
-        <img src="Netflix_logo.svg"
+        <img src="/logo/MyFlix.svg"
           alt="Logo"
           width={140}
           height={140}
@@ -45,7 +45,7 @@ function Header() {
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
         <Link href="./account">
-          <img src="profilepic.png"
+          <img src="/profile/profilepic.png"
             alt="Profile"
             className="cursor-pointer rounded"></img>
 

@@ -1,8 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useState } from 'react'
 import { useRecoilValue } from 'recoil'
+import { modalState } from '../atoms/modalAtoms'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
+import Modal from '../components/Modal'
 import Row from '../components/Row'
 import useAuth from '../hooks/useAuth'
 import { Movie } from '../typings'
@@ -34,7 +37,7 @@ const Home = ({
   animationstv,
 }: Props) => {
   const { loading } = useAuth()
-  // const showModal = useRecoilValue()
+  const showModal = useRecoilValue(modalState)
 
   if (loading) return null
 
@@ -61,7 +64,7 @@ const Home = ({
           <Row title="Animated Shows" movies={animationstv} />
         </section>
       </main>
-      {/* Modal */}
+      {showModal && <Modal />}
     </div>
   )
 }

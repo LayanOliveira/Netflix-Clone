@@ -26,7 +26,7 @@ function Header() {
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items=center space-x-2 md:space-x-10">
-        <img src="/logo/MyFlix.svg"
+        <img src="/MyFlix.svg"
           alt="Logo"
           width={150}
           height={150}
@@ -49,7 +49,7 @@ function Header() {
         {/* <Link href="./account"> */}
           <img 
             onClick={logout}
-            src="/profile/profilepic.png"
+            src="/static/profilepic.png"
             alt="Profile"
             className="cursor-pointer rounded"></img>
 

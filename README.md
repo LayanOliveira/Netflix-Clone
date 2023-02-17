@@ -42,3 +42,6 @@ To get your API key you need to make an account on TMDB and generate one.
 ## Account
 
 Accounts are currently handled by Google's Firebase.
+
+SignUp is working! 
+    https://content-bay.vercel.app/login

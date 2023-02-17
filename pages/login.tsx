@@ -37,14 +37,14 @@ function Login() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image
-        src="/static/movieposterbg.jpg"
+        src="/static/img/movieposterbg.jpg"
         alt="backgroung"
         fill
         className="-z-10 hidden opacity-60 sm:inline"
         object-fit="cover"
       />
       <img
-        src="/contentbay.svg"
+        src="/static/img/ContentBay.svg"
         alt="logo"
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
         width={150}

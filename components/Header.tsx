@@ -49,7 +49,7 @@ function Header() {
         {/* <Link href="./account"> */}
           <img 
             onClick={logout}
-            src="/static/profilepic.png"
+            src="/static/img/profilepic.png"
             alt="Profile"
             className="cursor-pointer rounded"></img>
 

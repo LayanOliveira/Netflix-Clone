@@ -10,6 +10,7 @@ import Row from '../components/Row'
 import useAuth from '../hooks/useAuth'
 import { Movie } from '../typings'
 import requests from '../utils/requests'
+import Hub from '../components/Hub'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -38,8 +39,11 @@ const Home = ({
 }: Props) => {
   const { loading } = useAuth()
   const showModal = useRecoilValue(modalState)
+  const subscription = false
 
-  if (loading) return null
+  if (loading || subscription === null) return null
+
+  if (!subscription) return <Hub/>
 
   return (
     <div className={`relative h-screen bg-gradient-to-b lg:h-[140vh] ${showModal && '!h-screen overflow-hidden'}`}>

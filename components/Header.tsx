@@ -46,14 +46,12 @@ function Header() {
         <MagnifyingGlassIcon className="hidden h-6 w-6 sm:inline" />
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
-        {/* <Link href="./account"> */}
+        <Link href="./account">
           <img 
-            onClick={logout}
             src="/static/img/profilepic.png"
             alt="Profile"
             className="cursor-pointer rounded"></img>
-
-        {/* </Link> */}
+        </Link>
       </div>
     </header>
   )
